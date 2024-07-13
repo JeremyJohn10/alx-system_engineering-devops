@@ -36,12 +36,12 @@ defaults
 
 frontend jeremy-tech-frontend
     bind *:80
-    default_backend clickviral-tech-backend
+    default_backend jeremy-tech-backend
 
-backend clickviral-tech-backend
+backend jeremy-tech-backend
     balance roundrobin
-    server 153324-web-01 54.236.232.163 check
-    server 153324-web-02 54.145.239.132 check
+    server 153324-web-01 54.236.232.163:80 check
+    server 153324-web-02 54.145.239.132:80 check
 "
 
 # shellcheck disable=SC2154
